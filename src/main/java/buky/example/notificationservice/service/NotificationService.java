@@ -15,5 +15,13 @@ public class NotificationService {
     public Notification saveNotification(Notification notification) {
         return notificationRepository.save(notification);
     }
+
+    public void addNewNotification(Notification message) {
+        notificationRepository.save(message);
+
+        if(!message.getProcessed()){
+            //TODO socketi
+        }
+    }
 }
 
