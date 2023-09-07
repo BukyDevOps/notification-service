@@ -11,11 +11,7 @@ public class SocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/socket")
-<<<<<<< Updated upstream
-                .setAllowedOrigins("*")
-=======
                 .setAllowedOrigins("http://localhost:3001")
->>>>>>> Stashed changes
                 .withSockJS();
     }
 
